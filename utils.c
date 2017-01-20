@@ -4,6 +4,7 @@
 #include <time.h>
 #include <math.h>
 #include "utils.h"
+#include "TamMat.h"
 
 
 float *init_data(char *file,int n){
@@ -27,13 +28,13 @@ float *init_data(char *file,int n){
         exit(1);
     }
 
-    for(i = 0; i<20;i++){
-        *(p+(20*i)+i) = 0;
+    for(i = 0; i<TamMat;i++){
+        *(p+(TamMat*i)+i) = 0;
 
     }
     while(fscanf(f,"%d %d %f",&linha,&coluna,&valor)>0){
-        *(p+(linha-1)*20 + (coluna - 1)) = valor;
-        *(p+(coluna-1)*20 + (linha - 1)) = valor;
+        *(p+(linha-1)*TamMat + (coluna - 1)) = valor;
+        *(p+(coluna-1)*TamMat + (linha - 1)) = valor;
     }
 
     /*for(i=0;i<n*n;i++){

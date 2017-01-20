@@ -5,10 +5,10 @@
 #include "utils.h"
 #include "algoritmo.h"
 #include "funcao.h"
+#include "TamMat.h"
 
-#define TamMat 500
 #define runs 30
-#define items 152
+#define items 7
 #define num_iter 10000
 
 int main(int argc, char *argv[])
